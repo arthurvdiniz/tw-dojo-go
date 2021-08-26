@@ -1,12 +1,18 @@
 package greet
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func Greeting(name string) (output string) {
-  if name == "" {
-    name = "my friend"
-  }
+func Greeting(name ...string) string {
+	if name == "" {
+		name = "my friend"
+	}
 
-  output = fmt.Sprintf("Hello, %s.", name)
-  return
+	if name == strings.ToUpper(name) {
+		return fmt.Sprintf("HELLO, %s!", name)
+	}
+
+	return fmt.Sprintf("Hello, %s.", name)
 }
