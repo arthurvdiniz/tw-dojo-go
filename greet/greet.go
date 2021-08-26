@@ -5,14 +5,20 @@ import (
 	"strings"
 )
 
-func Greeting(name ...string) string {
-	if name == "" {
-		name = "my friend"
+func Greeting(names ...string) string {
+  greeting := ""
+
+	if len(names) == 1 && names[0] == "" {
+		greeting = "my friend"
 	}
 
-	if name == strings.ToUpper(name) {
-		return fmt.Sprintf("HELLO, %s!", name)
+	for _, v := range names {
+		
 	}
 
-	return fmt.Sprintf("Hello, %s.", name)
+	if names == strings.ToUpper(names) {
+		return fmt.Sprintf("HELLO, %s!", names)
+	}
+
+	return fmt.Sprintf("Hello, %s.", names)
 }
