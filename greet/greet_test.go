@@ -13,4 +13,13 @@ func TestGreeting(t *testing.T) {
       t.Errorf("\nError:\n want\t-> %s\n got\t-> %s", want, got)
     }
   })
+
+  t.Run("test should return generic greeting when name is null", func(t *testing.T) {
+    want := "Hello, my friend."
+    got := Greeting("")
+
+    if want != got {
+      t.Errorf("\nError:\n want\t-> %s\n got\t-> %s", want, got)
+    }
+  })
 }
