@@ -1,5 +1,5 @@
 package greet
 
-func Greeting() string {
-  return "Greeting from Golang"
+func Greeting(name string) string {
+  return "Hello, Bob."
 }
